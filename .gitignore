@@ -1,0 +1,17 @@
+# Qt 用户配置文件
+*.user
+*.pro.user
+
+# 编译生成的文件
+build-*/
+*.o
+*.exe
+*.dll
+*.so
+*.a
+
+# 输出目录
+output_*/
+
+# 其他
+.DS_Store

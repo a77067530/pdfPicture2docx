@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PDF 图片导出工具</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBoxWatermark">
+      <property name="title">
+       <string>水印设置</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="editWatermarkButton">
+         <property name="text">
+          <string>编辑水印</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="watermarkLabel">
+         <property name="text">
+          <string>未设置</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="useWatermarkCheckBox">
+         <property name="text">
+          <string>使用水印</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxPDF">
+      <property name="title">
+       <string>PDF 文件</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="importButton">
+         <property name="text">
+          <string>导入 PDF</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="pdfLabel">
+         <property name="text">
+          <string>未选择</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxOutput">
+      <property name="title">
+       <string>生成目录</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QPushButton" name="chooseOutputDir">
+         <property name="text">
+          <string>选择生成目录</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="outputDirLabel">
+         <property name="text">
+          <string>未选择</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="pdfListWidget">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+       QListWidget {
+           background-color: #FFFFFF;
+           border: 1px solid #CCCCCC;
+           border-radius: 5px;
+           padding: 5px;
+       }
+       QListWidget::item {
+           height: 40px;
+           border-bottom: 1px solid #EEEEEE;
+       }
+       QListWidget::item:hover {
+           background-color: #F5F5F5;
+       }
+       </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="generateButton">
+        <property name="text">
+         <string>生成水印图片</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancelButton">
+        <property name="text">
+         <string>终止</string>
+        </property>
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="format">
+       <string>%p%</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+</ui>
